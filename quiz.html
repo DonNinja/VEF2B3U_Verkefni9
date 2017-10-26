@@ -6,13 +6,13 @@
 <body>
 	<div id="firstquestion">
 		<h1>Er loft til?</h1>
-		<button id="buttons1 true1">Já</button>
-		<button id="buttons1 false1">Nei</button>
+		<button class="buttons1" id="true1">Já</button>
+		<button class="buttons1" id="false1">Nei</button>
 	</div>
 	<div id="secondquestion">
 		<h1>Er vatn blautt?</h1>
-		<button id="buttons2 true2">Já</button>
-		<button id="buttons2 false2">Nei</button>
+		<button class="buttons2" id="true2">Já</button>
+		<button class="buttons2" id="false2">Nei</button>
 	</div>
 	<style type="text/css">
 		body {
@@ -30,19 +30,27 @@
 			display: none;
 		}
 		#firstquestion {
-			display: all;
+			display: none;
 		}
 	</style>
 	<script src="jquery.js"></script>
 	<script type="text/javascript">
 		"use strict";
-		/*$.when( $.ready ).then(function() {
+		$.when( $.ready ).then(function() {
 			$( "#firstquestion").fadeIn(1500);
-		});*/
-
-		$( "#buttons1" ).on( "click", function() {
-			$( "#true1" ).css("background-color", "green");
 		});
+
+		$( ".buttons1" ).on( "click", function() {
+				$( "#true1" ).css("background-color", "green");
+				$( "#false1" ).css("background-color", "red");
+			$( "#firstquestion" ).fadeOut(2000);
+			$( "#secondquestion" ).fadeIn(2000);
+		});
+
+		$( ".buttons2" ).on( "click", function() {
+			$( "#true2" ).css("background-color", "green");
+			$( "#false2" ).css("background-color", "red");
+		})
 	</script>
 </body>
 </html>
