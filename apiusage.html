@@ -6,10 +6,10 @@
 <body>
 
 	<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Dragðu textann hér yfir til að senda hann undir þetta.</div>
-	<p id="p1" draggable="true" ondragstart="dragstart_handler(event);">Þú getur dregið þennan texta.</p>
+	<p id="p1" draggable="true" ondragstart="dragstart_handler(event);">Þú getur dregið þennan texta. (p1)</p>
 	<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Dragðu textann hér yfir til að senda hann undir þetta.</div>
 	<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Dragðu textann hér yfir til að senda hann undir þetta.</div>
-	<p id="p2" draggable="true" ondragstart="dragstart_handler(event);">Þú getur dregið þennan texta.</p>
+	<p id="p2" draggable="true" ondragstart="dragstart_handler(event);">Þú getur dregið þennan texta. (p2)</p>
 	<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Dragðu textann hér yfir til að senda hann undir þetta.</div>
 	<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Dragðu textann hér yfir til að senda hann undir þetta.</div>
 
@@ -34,7 +34,7 @@
 	 // Set the dropEffect to move
 	 ev.dataTransfer.dropEffect = "move"
 	}
-	
+
 	function drop_handler(ev) {
 	 ev.preventDefault();
 	 // Get the id of the target and add the moved element to the target's DOM
